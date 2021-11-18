@@ -1,3 +1,3 @@
-import ScrollView from './src/VirtualizedView/ScrollView';
+import ScrollView from './src/ScrollView';
 
 export { ScrollView };
