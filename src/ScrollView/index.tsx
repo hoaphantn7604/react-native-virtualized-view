@@ -1,7 +1,8 @@
 import React from 'react';
-import { FlatList, ScrollView, ScrollViewProps } from 'react-native';
+import { FlatList, ScrollView } from 'react-native';
+import { VirtualizedViewProps } from './model';
 
-const VirtualizedView: ScrollViewProps = props => {
+const VirtualizedView: VirtualizedViewProps = props => {
   return (
     <ScrollView {...props}>
       <FlatList
@@ -12,7 +13,16 @@ const VirtualizedView: ScrollViewProps = props => {
         ListEmptyComponent={null}
         renderItem={null}
         ListHeaderComponent={() => (
-          <>{props.children}</>
+          <FlatList
+            data={[]}
+            scrollEnabled={false}
+            keyExtractor={(e, i) => 'dom' + i.toString()}
+            ListEmptyComponent={null}
+            renderItem={null}
+            ListHeaderComponent={() => (
+              <>{props.children}</>
+            )}
+          />
         )}
       />
     </ScrollView>
