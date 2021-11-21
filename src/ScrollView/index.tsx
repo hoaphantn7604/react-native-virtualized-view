@@ -1,17 +1,17 @@
 import React from 'react';
-import { FlatList, ScrollView } from 'react-native';
+import { FlatList } from 'react-native';
 import { Props } from './model';
 
 const ScrollViewComponent: Props = props => {
   return (
     <FlatList
-      style={props.style}
+      {...props}
       data={[]}
       keyExtractor={(e, i) => 'dom' + i.toString()}
       ListEmptyComponent={null}
       renderItem={null}
       ListHeaderComponent={() => (
-        <ScrollView {...props} style={{}}>{props.children}</ScrollView>
+        <>{props.children}</>
       )}
     />
   );
