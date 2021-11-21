@@ -1,8 +1,8 @@
 {
   "name": "react-native-virtualized-view",
-  "title": "React Native Virtualized View",
-  "version": "0.1.2",
-  "description": "React Native flatlist inside scrollview",
+  "title": "React Native Flatlist inside Scrollview",
+  "version": "0.1.3",
+  "description": "React Native Flatlist inside Scrollview",
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,6 +16,7 @@
     "react-native",
     "elements",
     "components",
+    "virtualized view",
     "flatlist inside scrollview"
   ],
   "author": {
