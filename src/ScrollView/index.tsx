@@ -1,32 +1,20 @@
 import React from 'react';
 import { FlatList, ScrollView } from 'react-native';
-import { VirtualizedViewProps } from './model';
+import { Props } from './model';
 
-const VirtualizedView: VirtualizedViewProps = props => {
+const ScrollViewComponent: Props = props => {
   return (
-    <ScrollView {...props}>
-      <FlatList
-        data={[]}
-        horizontal
-        scrollEnabled={false}
-        keyExtractor={(e, i) => 'random' + i.toString()}
-        ListEmptyComponent={null}
-        renderItem={null}
-        ListHeaderComponent={() => (
-          <FlatList
-            data={[]}
-            scrollEnabled={false}
-            keyExtractor={(e, i) => 'dom' + i.toString()}
-            ListEmptyComponent={null}
-            renderItem={null}
-            ListHeaderComponent={() => (
-              <>{props.children}</>
-            )}
-          />
-        )}
-      />
-    </ScrollView>
+    <FlatList
+      style={props.style}
+      data={[]}
+      keyExtractor={(e, i) => 'dom' + i.toString()}
+      ListEmptyComponent={null}
+      renderItem={null}
+      ListHeaderComponent={() => (
+        <ScrollView {...props} style={{}}>{props.children}</ScrollView>
+      )}
+    />
   );
 };
 
-export default VirtualizedView;
+export default ScrollViewComponent;

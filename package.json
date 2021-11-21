@@ -1,7 +1,7 @@
 {
   "name": "react-native-virtualized-view",
   "title": "React Native Virtualized View",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "React Native flatlist inside scrollview",
   "main": "index.ts",
   "scripts": {

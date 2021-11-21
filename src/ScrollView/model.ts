@@ -1,6 +1,6 @@
 import React from 'react';
 import { ScrollViewProps } from 'react-native';
 
-interface Props extends ScrollViewProps {}
+interface IProps extends ScrollViewProps {}
 
-export type VirtualizedViewProps = React.FC<Props>;
+export type Props = React.FC<IProps>;
