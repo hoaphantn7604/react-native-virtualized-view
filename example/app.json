@@ -1,0 +1,22 @@
+{
+  "name": "react-native-virtualized-view-example",
+  "displayName": "VirtualizedView Example",
+  "expo": {
+    "name": "react-native-virtualized-view-example",
+    "slug": "react-native-virtualized-view-example",
+    "description": "Example app for react-native-virtualized-view",
+    "privacy": "public",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
