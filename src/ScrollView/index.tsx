@@ -10,7 +10,7 @@ const ScrollViewComponent: Props = (props) => {
       keyExtractor={(_e, i) => 'dom' + i.toString()}
       ListEmptyComponent={null}
       renderItem={null}
-      ListHeaderComponent={() => <>{props.children}</>}
+      ListHeaderComponent={<>{props.children}</>}
     />
   );
 };
